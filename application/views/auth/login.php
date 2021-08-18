@@ -30,7 +30,7 @@
                     <div class="container-fluid">
 
                         <a class="navbar-brand font-weight-bolder ms-lg-0 ms-3 " href="<?= base_url(); ?>">
-                            <img src="<?= base_url(); ?>assets/img/logo.png" alt="" width="10%"> New Simluhtan
+                            <img src="<?= base_url(); ?>assets/img/logo.png" alt="" width="10%"> Simluhtan
                         </a>
                         <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon mt-2">
@@ -42,23 +42,18 @@
                         <div class="collapse navbar-collapse" id="navigation">
                             <ul class="navbar-nav mx-auto">
                                 <li class="nav-item">
-                                    <a class="nav-link d-flex align-items-center me-2 active" aria-current="page" href="<?= base_url(); ?>umum/dashboard/publik">
+                                    <a class="nav-link d-flex align-items-center me-2 active" aria-current="page" href="<?= base_url(); ?>pusat/dashboard/publik">
                                         <i class="fa fa-chart-pie opacity-6 text-dark me-1"></i>
                                         Dashboard
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link me-2" href="<?= base_url(); ?>pages/profile.html">
+                                    <a class="nav-link me-2" href="<?= base_url(); ?>kab/profil">
                                         <i class="fa fa-user opacity-6 text-dark me-1"></i>
                                         Profile
                                     </a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link me-2" href="<?= base_url(); ?>pages/sign-up.html">
-                                        <i class="fas fa-user-circle opacity-6 text-dark me-1"></i>
-                                        Sign Up
-                                    </a>
-                                </li>
+
                                 <li class="nav-item">
                                     <a class="nav-link me-2" href="<?= base_url(); ?>pages/sign-in.html">
                                         <i class="fas fa-key opacity-6 text-dark me-1"></i>
@@ -83,18 +78,21 @@
                             <div class="card card-plain mt-8">
                                 <div class="card-header pb-0 text-left bg-transparent">
                                     <h3 class="font-weight-bolder text-info text-gradient">Selamat Datang</h3>
-                                    <p class="mb-0">Masukkan NIK anda untuk login</p>
+                                    <p class="mb-0">Masukkan akun anda untuk login</p>
                                 </div>
                                 <div class="card-body">
-                                    <form role="form">
-                                        <label>NIK</label>
+                                    <form class="user" method="post" action="<?= base_url('auth/act_login'); ?>">
+                                        <label>Username</label>
                                         <div class="mb-3">
-                                            <input type="text" class="form-control" placeholder="NIK" aria-label="Email" aria-describedby="email-addon">
+                                            <input type="text" class="form-control" name="username" placeholder="Username" aria-label="Email" aria-describedby="email-addon">
+                                            <?= form_error('username', '<small class="text-danger pl-3">', '</small>'); ?>
                                         </div>
                                         <label>Password</label>
                                         <div class="mb-3">
-                                            <input type="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="password-addon">
+                                            <input type="password" class="form-control" name="password" placeholder="Password" aria-label="Password" aria-describedby="password-addon">
+                                            <?= form_error('password', '<small class="text-danger pl-3">', '</small>'); ?>
                                         </div>
+
                                         <div class="form-check form-switch">
                                             <input class="form-check-input" type="checkbox" id="rememberMe" checked="">
                                             <label class="form-check-label" for="rememberMe">Ingat saya</label>

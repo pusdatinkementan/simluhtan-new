@@ -107,7 +107,7 @@ class Auth extends CI_Controller
                     ];
                     $this->session->set_userdata($data);
                     if ($user['role_id'] == 1) {
-                        redirect('admin');
+                        redirect('pages/dashboard');
                     } else {
                         redirect('user');
                     }
@@ -172,6 +172,7 @@ class Auth extends CI_Controller
         $result = file_get_contents('https://api.pertanian.go.id/api/simantap/userlogin/auth', true, $context);
         $json = json_decode($result, true);
         $data1 = $json['data'];
+
         if (isset($json['success']) == 'Login sukses') {
 
             $user = $this->db->get_where('user', ['name' => $this->input->post('username')])->row_array();
@@ -186,6 +187,7 @@ class Auth extends CI_Controller
                     'name' => htmlspecialchars($this->input->post('username', true)),
                     'email' => htmlspecialchars($data1['email']),
                     'image' => 'default.jpg',
+                    'usrprofil' => $data1,
                     'password' => password_hash($this->input->post('password'), PASSWORD_DEFAULT),
                     'role_id' => 2,
                     'is_active' => 1,   // is_active 1 set user aktif, 0 set user non aktif
