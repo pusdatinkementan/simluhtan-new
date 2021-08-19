@@ -30,9 +30,6 @@
             <li class="nav-item mt-3">
                 <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Kelembagaan Penyuluhan</h6>
             </li>
-
-
-
             <li class="nav-item">
                 <a class="nav-link  " href="<?= base_url(); ?>">
                     <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
@@ -113,6 +110,10 @@
 
             <li class="nav-item mt-3">
                 <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Verifikasi Erdkk</h6>
+            </li>
+
+            <li class="nav-item mt-3">
+                <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Rekapitulasi</h6>
             </li>
 
             <li class="nav-item">
