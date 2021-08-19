@@ -74,7 +74,7 @@
                                                 <li class="list-group-item"><b>Bidang Keahlian :</b> Tanaman Pangan</li>
                                                 <li class="list-group-item"><b>Pendidikan Akhir :</b> S2</li>
                                                 <li class="list-group-item"><b>Bidang Pendidikan :</b> Pertanian</li>
-                                                <li class="list-group-item"><b>Alamat Email : </b></li>
+                                                <li class="list-group-item"><b>Alamat Email : </b>nandhar@pertanian.go.id</li>
                                             </ul>
                                         </div>
 
